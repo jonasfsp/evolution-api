@@ -154,7 +154,7 @@ export class ConfigService {
     this.env.PRODUCTION = process.env?.NODE_ENV === 'PROD';
     if (process.env?.DOCKER_ENV === 'true') {
       this.env.SERVER.TYPE = 'http';
-      this.env.SERVER.PORT = 8080;
+      this.env.SERVER.PORT = 8083;
     }
   }
 
