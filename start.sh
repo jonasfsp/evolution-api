@@ -19,7 +19,7 @@ echo
 echo "> Successfully build  teste "
 
 echo
-echo "> Starting application..."
+echo "> Starting application.. teste."
 echo
 
 node ./dist/src/main.js
