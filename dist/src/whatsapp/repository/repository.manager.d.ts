@@ -1,0 +1,34 @@
+import { MongoClient } from 'mongodb';
+import { ConfigService } from '../../config/env.config';
+import { AuthRepository } from './auth.repository';
+import { ChatRepository } from './chat.repository';
+import { ChatwootRepository } from './chatwoot.repository';
+import { ContactRepository } from './contact.repository';
+import { MessageRepository } from './message.repository';
+import { MessageUpRepository } from './messageUp.repository';
+import { ProxyRepository } from './proxy.repository';
+import { RabbitmqRepository } from './rabbitmq.repository';
+import { SettingsRepository } from './settings.repository';
+import { TypebotRepository } from './typebot.repository';
+import { WebhookRepository } from './webhook.repository';
+import { WebsocketRepository } from './websocket.repository';
+export declare class RepositoryBroker {
+    readonly message: MessageRepository;
+    readonly chat: ChatRepository;
+    readonly contact: ContactRepository;
+    readonly messageUpdate: MessageUpRepository;
+    readonly webhook: WebhookRepository;
+    readonly chatwoot: ChatwootRepository;
+    readonly settings: SettingsRepository;
+    readonly websocket: WebsocketRepository;
+    readonly rabbitmq: RabbitmqRepository;
+    readonly typebot: TypebotRepository;
+    readonly proxy: ProxyRepository;
+    readonly auth: AuthRepository;
+    private configService;
+    constructor(message: MessageRepository, chat: ChatRepository, contact: ContactRepository, messageUpdate: MessageUpRepository, webhook: WebhookRepository, chatwoot: ChatwootRepository, settings: SettingsRepository, websocket: WebsocketRepository, rabbitmq: RabbitmqRepository, typebot: TypebotRepository, proxy: ProxyRepository, auth: AuthRepository, configService: ConfigService, dbServer?: MongoClient);
+    private dbClient?;
+    private readonly logger;
+    get dbServer(): MongoClient;
+    private __init_repo_without_db__;
+}
