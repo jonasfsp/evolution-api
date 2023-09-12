@@ -12,7 +12,7 @@ fi
 echo "> removing dist"
 rm -rf ./dist
 echo
-echo "> transpiling..."
+echo "> transpiling...d"
 npm run build
 
 echo
