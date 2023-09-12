@@ -16,7 +16,7 @@ echo "> transpiling..."
 npm run build
 
 echo
-echo "> Successfully build "
+echo "> Successfully build  teste "
 
 echo
 echo "> Starting application..."
